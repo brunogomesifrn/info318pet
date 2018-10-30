@@ -2052,7 +2052,7 @@ nav a:hover {
   padding-left: 30px;
   padding-right: 60px;
   border-radius: 25px;
-  background: #222222;
+  background: #7ac3ff;
   border: none;
   color: #fff;
   display: inline-block;
@@ -2063,6 +2063,7 @@ nav a:hover {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   cursor: pointer;
+  margin: 0 5px;
 }
 
 .primary-btn2:focus {
