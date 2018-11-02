@@ -22,12 +22,12 @@ $(document).ready(function(){
      
    // -------   Active Mobile Menu-----//
 
-  $(".menu-bar").on('click', function(e){
+  /*$(".menu-bar").on('click', function(e){
       e.preventDefault();
       $("nav").toggleClass('hide');
       $("span", this).toggleClass("lnr-menu lnr-cross");
       $(".main-menu").addClass('mobile-menu');
-  });
+  });*/
 
 
   $('.nav-item a:first').tab('show');
@@ -35,17 +35,13 @@ $(document).ready(function(){
 
 
   // Select all links with hashes
-  $('.main-menubar a[href*="#"]')
+  $('.navbar a[href*="#"]')
     // Remove links that don't actually link to anything
     .not('[href="#"]')
     .not('[href="#0"]')
     .click(function(event) {
       // On-page links
-      if (
-        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-        && 
-        location.hostname == this.hostname
-      ) {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
         // Figure out element to scroll to
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -55,18 +51,16 @@ $(document).ready(function(){
           event.preventDefault();
           $('html, body').animate({
             scrollTop: target.offset().top-68
-          }, 1000, function() {
+          }, 1000/*, function() { 
             // Callback after animation
             // Must change focus!
             var $target = $(target);
             $target.focus();
-            if ($target.is(":focus")) { // Checking if the target was focused
+            if ($target.is(":focus")) // Checking if the target was focused
               return false;
-            } else {
-              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-              $target.focus(); // Set focus again
-            };
-          });
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          }*/);
         }
       }
     });
@@ -85,6 +79,12 @@ $(document).ready(function(){
       // -------   Mail Send ajax
 
          $(document).ready(function() {
+            $('.open-popup').each(function(){
+              $(this).magnificPopup({
+                type: "inline"
+              });
+            });
+
             var form = $('#myForm'); // contact form
             var submit = $('.submit-btn'); // submit button
             var alert = $('.alert-msg'); // alert div for show alert message
