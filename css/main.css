@@ -119,7 +119,7 @@ a, a:focus, a:hover {
 h1, h2, h3,
 h4, h5, h6 {
   font-family: "Poppins", sans-serif;
-  color: #222222;
+  /*color: #222222;*/
   line-height: 1.2em !important;
   margin-bottom: 0;
   margin-top: 0;
@@ -2117,6 +2117,28 @@ nav a:hover {
   right: 0;
   top: 0;
   bottom: 0;
+}
+
+.mfp-content {
+  background-image: -moz-linear-gradient(90deg, #2380ff 0%, #52fdd9 100%);
+  background-image: -webkit-linear-gradient(90deg, #2380ff 0%, #52fdd9 100%);
+  background-image: -ms-linear-gradient(90deg, #2380ff 0%, #52fdd9 100%);
+  background-image: linear-gradient(90deg, rgba(35, 128, 255, 0.8) 0%, rgba(34, 205, 169, 0.8) 100%);
+
+  height: -moz-calc(100% - 100px);
+  height: -webkit-calc(100% - 100px);
+  height: -o-calc(100% - 100px);
+  height: calc(100% - 100px);
+
+  padding: 10px;
+
+  color: white;
+
+  text-align: center;
+}
+
+.mfp-content section {
+  height: 100%;
 }
 
 .navbar {
