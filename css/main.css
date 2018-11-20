@@ -88,6 +88,11 @@ a, a:focus, a:hover {
   outline: 0;
 }
 
+.input {
+  border-radius: 5px;
+
+}
+
 .btn.active.focus,
 .btn.active:focus,
 .btn.focus,
@@ -1818,7 +1823,7 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   border-radius: 0px;
   height: 40px;
-  background: #f9f9ff;
+  background: #f9f9ff
   padding-left: 45px;
   padding-right: 40px;
   width: 100%;
@@ -2285,52 +2290,53 @@ nav a:hover {
   }
 }
 
-.about-right .form-control {
-  border-radius: 0;
-  background-color: transparent;
-  border: 1px solid #656463;
+.form {
   color: #fff;
   font-size: 14px;
   padding: 12px;
 }
 
-.about-right input, .about-right textarea {
+.form input, .form textarea {
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 400;
   background-color: transparent;
-  border: 1px solid #656463;
+  border: 1px solid #dedede;
   padding: 12px;
-  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
-.about-right .option {
+.form .option {
   color: #222;
 }
 
-.about-right .nice-select span {
+.form .nice-select span {
   color: #ccc;
   font-size: 14px;
   font-weight: 200;
 }
 
-.about-right textarea {
+.form textarea {
   height: 150px;
 }
 
 @media (max-width: 1024px) and (min-width: 988px) {
-  .about-right textarea {
+  .form textarea {
     height: 70px;
   }
 }
 
-.about-right .list {
+.form .list {
   width: 100%;
 }
 
-.about-right .payment-method {
+/*.about-right .payment-method {
   color: #ccc;
   margin-top: 30px;
-}
+}*/
 
 .consultans-area {
   background-color: #f9f9ff;
