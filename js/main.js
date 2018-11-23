@@ -29,17 +29,7 @@ $(document).ready(function(){
   });*/
 
 
-  //$('.nav-item a:first').tab('show');
-
-  console.log($("input[defaultPlaceholder]").attr('.defaultPlaceholder'));
-  $("input[defaultPlaceholder]").on({
-    click: function(){
-      this.placeholder = '';
-    },
-    blur: function(){
-      this.placeholder = this.defaultPlaceholder;
-    }
-  });
+  $('.nav-item a:first').tab('show');
 
   // Select all links with hashes
   $('.navbar a[href*="#"]')
