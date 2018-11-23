@@ -4,7 +4,7 @@
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
-	<link rel="shortcut icon" href="img/fav.png">
+	<link rel="shortcut icon" href="img/logo.png">
 	<!-- Author Meta -->
 	<meta name="author" content="Colorlib">
 	<!-- Meta Description -->
@@ -18,7 +18,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/linearicons.css">=
+	<link rel="stylesheet" href="css/linearicons.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/nice-select.css">
@@ -27,12 +27,27 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body id="topo">
-	<section class="text-center" id="login">
-		<img class="rounded-circle" src="img/logo.png" />
-		<form class="form" method="post" action="">
-			<input type="text" name="username" defaultPlaceholder="Nome de usuário" />
-			<input type="" name="" defaultPlaceholder="Senha" />
-		</form>
+	<section class="text-center flex-middle" id="login">
+		<div>
+			<img class="" src="img/logo.png" />
+			<form class="form" method="post" action="">
+	            <div class="control-group">
+	            	<div class="form-group floating-label-form-group controls mb-0">
+						<label>Nome de usuário</label>
+						<input type="text" name="username" placeholder="Nome de usuário" />
+	            	</div>
+	            </div>
+	            <div class="control-group">
+	            	<div class="form-group floating-label-form-group controls mb-0">
+						<label>Senha</label>
+						<input type="" name="" placeholder="Senha" />
+						<a href="">Esqueceu a senha?</a>
+	            	</div>
+	            </div>
+				<button class="primary-btn d-block mx-auto mb-3">Login</button>
+				<a href="">Ainda não é cadastrado?</a>
+			</form>
+		</div>
 	</section>
 
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>

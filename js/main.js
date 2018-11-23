@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 	"use strict";
 
@@ -13,11 +12,11 @@ $(document).ready(function(){
 	$(".fitscreen").css("height", fitscreen);
 
   //-------- Active Sticky Js ----------//
-     $(".default-header").sticky({topSpacing:0});
+  $(".default-header").sticky({topSpacing:0});
 
   
   //------- Active Nice Select --------//
-     $('select').niceSelect();
+  $('select').niceSelect();
      
      
    // -------   Active Mobile Menu-----//
@@ -30,15 +29,14 @@ $(document).ready(function(){
   });*/
 
 
-  $('.nav-item a:first').tab('show');
+  //$('.nav-item a:first').tab('show');
 
-  console.log($("input[defaultPlaceholder]").attr('.defaultPlaceholder');
+  console.log($("input[defaultPlaceholder]").attr('.defaultPlaceholder'));
   $("input[defaultPlaceholder]").on({
     click: function(){
       this.placeholder = '';
     },
     blur: function(){
-
       this.placeholder = this.defaultPlaceholder;
     }
   });
@@ -76,52 +74,60 @@ $(document).ready(function(){
 
 
 
-    //  Counter Js 
+  //  Counter Js 
 
-    $('.counter').counterUp({
-        delay: 10,
-        time: 1000
+  $('.counter').counterUp({
+      delay: 10,
+      time: 1000
+  });
+
+  
+
+    // -------   Mail Send ajax
+
+ $(document).ready(function() {
+    $('.open-popup').each(function(){
+      $(this).magnificPopup({
+        type: "inline"
+      });
     });
 
-    
+    var form = $('#myForm'); // contact form
+    var submit = $('.submit-btn'); // submit button
+    var alert = $('.alert-msg'); // alert div for show alert message
 
-      // -------   Mail Send ajax
+    // form submit event
+    form.on('submit', function(e) {
+        e.preventDefault(); // prevent default form submit
 
-         $(document).ready(function() {
-            $('.open-popup').each(function(){
-              $(this).magnificPopup({
-                type: "inline"
-              });
-            });
-
-            var form = $('#myForm'); // contact form
-            var submit = $('.submit-btn'); // submit button
-            var alert = $('.alert-msg'); // alert div for show alert message
-
-            // form submit event
-            form.on('submit', function(e) {
-                e.preventDefault(); // prevent default form submit
-
-                $.ajax({
-                    url: 'mail.php', // form action url
-                    type: 'POST', // form submit method get/post
-                    dataType: 'html', // request type html/json/xml
-                    data: form.serialize(), // serialize form data
-                    beforeSend: function() {
-                        alert.fadeOut();
-                        submit.html('Sending....'); // change submit button text
-                    },
-                    success: function(data) {
-                        alert.html(data).fadeIn(); // fade in response data
-                        form.trigger('reset'); // reset form
-                        submit.attr("style", "display: none !important");; // reset submit button text
-                    },
-                    error: function(e) {
-                        console.log(e)
-                    }
-                });
-            });
+        $.ajax({
+            url: 'mail.php', // form action url
+            type: 'POST', // form submit method get/post
+            dataType: 'html', // request type html/json/xml
+            data: form.serialize(), // serialize form data
+            beforeSend: function() {
+                alert.fadeOut();
+                submit.html('Sending....'); // change submit button text
+            },
+            success: function(data) {
+                alert.html(data).fadeIn(); // fade in response data
+                form.trigger('reset'); // reset form
+                submit.attr("style", "display: none !important");; // reset submit button text
+            },
+            error: function(e) {
+                console.log(e)
+            }
         });
+    });
+  });
+
+  $("body").on("input propertychange", ".floating-label-form-group", function(e) {
+    $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
+  }).on("focus", ".floating-label-form-group", function() {
+    $(this).addClass("floating-label-form-group-with-focus");
+  }).on("blur", ".floating-label-form-group", function() {
+    $(this).removeClass("floating-label-form-group-with-focus");
+  });
 
 
  });
