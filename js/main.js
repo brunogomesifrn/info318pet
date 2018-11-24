@@ -1,11 +1,11 @@
 $(document).ready(function(){
 	"use strict";
 
-	var window_width 	 = $(window).width(),
-	window_height 		 = window.innerHeight,
-	header_height 		 = $(".default-header").height(),
-	header_height_static = $(".site-header.static").outerHeight(),
-	fitscreen 			 = window_height - header_height;
+	var window_width = $(window).width(),
+      window_height = window.innerHeight,
+      header_height = $(".default-header").height(),
+      header_height_static = $(".site-header.static").outerHeight(),
+      fitscreen = window_height - header_height;
 
 
 	$(".fullscreen").css("height", window_height)
@@ -17,7 +17,27 @@ $(document).ready(function(){
   
   //------- Active Nice Select --------//
   $('select').niceSelect();
-     
+
+  var adjustBox = function() {
+    $('.box > div').each(function(){
+      var $this = $(this);
+      if ($this.height() > $(window).height())
+        $this.css({
+          top: 0,
+          transform: 'translate(-50%, 0)'
+        });
+      else
+        $this.css({
+          top: '50%',
+          transform: 'translate(-50%, -50%)'
+        });
+    });
+  }
+
+  $(window).resize(function(){
+    adjustBox();
+  });
+  adjustBox();
      
    // -------   Active Mobile Menu-----//
 
@@ -28,8 +48,7 @@ $(document).ready(function(){
       $(".main-menu").addClass('mobile-menu');
   });*/
 
-
-  $('.nav-item a:first').tab('show');
+  //$('.nav-item a:first').tab('show');
 
   // Select all links with hashes
   $('.navbar a[href*="#"]')

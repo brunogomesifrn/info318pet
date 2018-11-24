@@ -7,7 +7,6 @@
 /*  Basic Style 
 /* =================================== */
 ::-moz-selection {
-  /* Code for Firefox */
   background-color: #2482ff;
   color: #fff;
 }
@@ -72,12 +71,12 @@ figure {
   margin: 0;
 }
 
-#login {
+.box {
   position: relative;
   height: 100vh;
 }
 
-#login > div{
+.box > div{
   margin: 0;
   position: absolute;
   top: 50%;
@@ -105,7 +104,6 @@ a, a:focus, a:hover {
 
 .input {
   border-radius: 5px;
-
 }
 
 .btn.active.focus,
@@ -184,14 +182,6 @@ td, th {
   border-radius: 0px;
 }
 
-.cidade {
-  font-family: "Poppins";
-  background: -moz-linear-gradient(0deg, #449EDF 0%, #52fdd9 100%); 
-  background: -webkit-linear-gradient(0deg, #449EDF 0%, #52fdd9 100%); 
-  background: -ms-linear-gradient(0deg, #449EDF 0%, #52fdd9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
@@ -801,9 +791,9 @@ td, th {
   font-size: 24px;
 }
 
-b, i, sup, sub, u, del {
+/*b, i, sup, sub, u, del {
   color: #fcd2ff;
-}
+}*/
 
 h1 {
   font-size: 36px;
@@ -831,6 +821,14 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.5em;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
 }
 
 .typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
@@ -1927,7 +1925,6 @@ body {
 }
 
 nav {
-  /*margin-right: 70px;*/
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1946,17 +1943,17 @@ nav {
     z-index: 5;
     background: #fff;
   }
-  nav a {
+  /*nav a {
     color: #2482ff !important;
-  }
-  nav a:hover {
+  }*/
+  /*nav a:hover {
     color: #2482ff;
-  }
+  }*/
 }
 
-nav.hide {
+/*nav.hide {
   transform: scale(0);
-}
+}*/
 
 nav a {
   color: #000;
@@ -1975,6 +1972,24 @@ nav a {
 
 nav a:hover {
   color: #2482ff;
+}
+
+nav > h1 {
+  background: -moz-linear-gradient(0deg, #449EDF 0%, #52fdd9 100%); 
+  background: -webkit-linear-gradient(0deg, #449EDF 0%, #52fdd9 100%); 
+  background: -ms-linear-gradient(0deg, #449EDF 0%, #52fdd9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 992px) {
+  nav img {
+    height: 50px;
+    width: auto;
+  }
+  nav a, nav button{
+    text-align: center;
+  }
 }
 
 .section-gap {
@@ -2393,8 +2408,9 @@ form .row:first-child .floating-label-form-group {
   padding: 12px;
   border-radius: 5px;
   outline: none;
+  width: 100%;
   display: block;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
 }
 
 .form .option {
@@ -2465,22 +2481,8 @@ form .row:first-child .floating-label-form-group {
 
 @media (max-width: 767px) {
   .single-con .content .content-overlay {
-    left: 65px;
-    width: 67%;
-  }
-}
-
-@media (max-width: 414px) {
-  .single-con .content .content-overlay {
-    left: 62px;
-    width: 68%;
-  }
-}
-
-@media (max-width: 413px) {
-  .single-con .content .content-overlay {
-    left: 12px;
-    width: 92%;
+    /*left: 65px;*/
+    width: 100%;
   }
 }
 
