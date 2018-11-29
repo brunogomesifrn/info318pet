@@ -1,11 +1,3 @@
-/*--------------------------- Color variations ----------------------*/
-/* Medium Layout: 1280px */
-/* Tablet Layout: 768px */
-/* Mobile Layout: 320px */
-/* Wide Mobile Layout: 480px */
-/* =================================== */
-/*  Basic Style 
-/* =================================== */
 ::-moz-selection {
   background-color: #2482ff;
   color: #fff;
@@ -121,10 +113,6 @@ a, a:focus, a:hover {
   padding: 60px;
 }
 
-/**
- *  Typography
- *
- **/
 .btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
   font-size: 1em;
   line-height: inherit;
@@ -137,7 +125,6 @@ a, a:focus, a:hover {
 h1, h2, h3,
 h4, h5, h6 {
   font-family: "Poppins", sans-serif;
-  /*color: #222222;*/
   line-height: 1.2em !important;
   margin-bottom: 0;
   margin-top: 0;
@@ -182,15 +169,6 @@ td, th {
   border-radius: 0px;
 }
 
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
 .clear::before, .clear::after {
   content: " ";
   display: table;
@@ -2437,20 +2415,15 @@ form .row:first-child .floating-label-form-group {
   width: 100%;
 }
 
-/*.about-right .payment-method {
-  color: #ccc;
-  margin-top: 30px;
-}*/
-
-.consultans-area {
+#cuidados, #resultados {
   background-color: #f9f9ff;
 }
 
-.consultans-area .header-text {
+#cuidados .header-text, #resultados .header-text {
   text-align: center;
 }
 
-.consultans-area .header-text h1 {
+#cuidados .header-text h1, #resultados .header-text {
   margin-bottom: 25px;
 }
 
